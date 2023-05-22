@@ -20,7 +20,7 @@ class EventHandler(tcod.event.EventDispatch[Action]):
             if action is None:
                 continue
 
-            action.perfrom()
+            action.perform()
 
             self.engine.handle_enemy_turns()
             self.engine.update_fov() # Update the FOV BEFORE the players next action

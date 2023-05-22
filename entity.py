@@ -53,8 +53,7 @@ class Entity:
             if hasattr(self, "gamemap"): # Possibly uninitialzied
                 self.gamemap.entities.remove(self)
             self.gamemap = gamemap
-            gamemap.entity.add(self)
-
+            gamemap.entities.add(self)
 
     def move(self, dx: int, dy: int) -> None:
         self.x += dx
